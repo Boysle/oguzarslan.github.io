@@ -1,21 +1,35 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-body{
+body {
     background: rgb(24, 28, 63);
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.tiltcard{
-    width: 421px;
-    height: 614px;
+.tiltcard {
+    width: 320px;
+    height: 467px;
     background: rgba(0, 0, 0, 0);
     margin: 0 20px;
     border-radius: 6px;
     border: 1px solid rgba(255, 255, 255, 0);
+    cursor: pointer; /* Change cursor to pointer to indicate clickable area */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s; /* Smooth transition on click */
+    will-change: transform; /* Optimize for performance */
+}
+
+.tiltcard:hover {
+    transform: scale(1.05); /* Slightly enlarge the card on hover */
+}
+
+.tiltcard:active {
+    transform: scale(0.95); /* Slightly shrink the card on click */
 }
 
 .tiltcard img {
@@ -23,5 +37,5 @@ body{
     height: auto;  /* Maintain image aspect ratio */
     object-fit: cover; /* Crop image to fit within card while maintaining aspect ratio */
     border-radius: 6px;  
-    border: 1px solid rgba(0, 0, 0, 0);
+    border: 2px solid rgba(0, 0, 0, 0.274);
 }

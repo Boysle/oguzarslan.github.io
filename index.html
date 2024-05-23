@@ -1,20 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>3D Button Effects</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/script.js"></script>
+    <title>3D Button Effects</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/vanilla_tilt.js"></script>
 </head>
 <body>
-  <div class="tiltcard" data-tilt 
-  data-tilt-glare>
-  <img src="images/card_0.png" alt="Image 1">
-  </div>
-  <div class="tiltcard" data-tilt 
-  data-tilt-glare>
-  <img src="images/card_1.png" alt="Image 1">
-  </div>
+    <div class="tiltcard" data-tilt data-tilt-glare onclick="handleClick('card_0')">
+        <img src="images/card_0.png" alt="Image 0">
+    </div>
+    <div class="tiltcard" data-tilt data-tilt-glare onclick="handleClick('card_1')">
+        <img src="images/card_1.png" alt="Image 1">
+    </div>
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".tiltcard"), {
+            max: 15,
+            speed: 300,
+            glare: true,
+            "max-glare": 0.3
+        });
 
-  <script src="js/vanilla_tilt.js"></script>
+        function handleClick(card) {
+            alert(`You clicked on ${card}`);
+            // Add any other functionality you need here
+        }
+    </script>
 </body>
 </html>
