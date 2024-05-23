@@ -6,13 +6,15 @@
     <script src="js/vanilla_tilt.js"></script>
 </head>
 <body>
-    <div class="tiltcard" data-tilt data-tilt-glare onclick="handleClick('card_0')">
+    <div class="tiltcard" data-tilt data-tilt-glare onclick="handleClick('reality-craft.html')">
         <img src="images/card_0.png" alt="Image 0">
     </div>
-    <div class="tiltcard" data-tilt data-tilt-glare onclick="handleClick('card_1')">
+    <div class="tiltcard" data-tilt data-tilt-glare onclick="handleClick('smart-vertical-farm.html')">
         <img src="images/card_1.png" alt="Image 1">
     </div>
     <script>
+        const siteName = 'boysle.github.io'; // Define the site name as a variable
+
         VanillaTilt.init(document.querySelectorAll(".tiltcard"), {
             max: 15,
             speed: 300,
@@ -20,9 +22,9 @@
             "max-glare": 0.3
         });
 
-        function handleClick(card) {
-            alert(`You clicked on ${card}`);
-            // Add any other functionality you need here
+        function handleClick(page) {
+            const url = `https://${siteName}/${page}`;
+            window.location.href = url; // Redirects to the constructed URL
         }
     </script>
 </body>
