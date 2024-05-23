@@ -10,11 +10,11 @@ body{
     justify-content: center;
 }
 .tiltcard{
-    width: 400px;
-    height: 594px;
+    width: 421px;
+    height: 614px;
     background: rgba(0, 0, 0, 0);
     margin: 0 20px;
-    border-radius: 10px;
+    border-radius: 6px;
     border: 1px solid rgba(255, 255, 255, 0);
 }
 
@@ -22,6 +22,6 @@ body{
     width: 100%; /* Stretch image to fill card width */
     height: auto;  /* Maintain image aspect ratio */
     object-fit: cover; /* Crop image to fit within card while maintaining aspect ratio */
-    border-radius: 10px;  
+    border-radius: 6px;  
     border: 1px solid rgba(0, 0, 0, 0);
 }
