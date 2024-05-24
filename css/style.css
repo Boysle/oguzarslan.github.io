@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
 }
+
 body {
     background: rgb(24, 28, 63);
     min-height: 100vh;
@@ -9,6 +10,25 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+.content {
+    color: #ffffff; /* Set text color to white for visibility */
+    text-align: center; /* Center align text */
+}
+
+p {
+    margin: 16px 0; /* Default margin for paragraphs */
+}
+
+a {
+    color: #b4f4ff; /* Set the link color */
+    text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
 .tiltcard {
     width: 320px;
     height: 467px;
